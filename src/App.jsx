@@ -1,9 +1,11 @@
 import "./App.css";
+import React, { useState } from "react";
+import CreateToDo from "./CreateToDo";
 
 function App() {
   return (
-    <div className="App">
-      <div>Init project</div>
+    <div>
+      <CreateToDo />
     </div>
   );
 }
