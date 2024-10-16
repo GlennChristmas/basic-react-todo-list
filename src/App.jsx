@@ -15,6 +15,18 @@ function App() {
   return (
     <div>
       <CreateToDo handleToDoSubmit={handleToDoSubmit} />
+      <div className="toDoListContainer">
+        {toDoList.map((item) => {
+          return (
+            <div className="toDoElementGrid">
+              <div>{item.task}</div>
+              <div>{item.contents}</div>
+              <div>{item.priority}</div>
+              <div>{item.category}</div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

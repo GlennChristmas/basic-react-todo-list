@@ -6,3 +6,19 @@
   width: 30%;
   gap: 20px;
 }
+
+.toDoListContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.toDoElementGrid {
+  border: 1px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: rgb(118, 168, 168);
+  background-color: rgb(180, 226, 215);
+  padding: 20px;
+  width: 10rem;
+  margin: 20px;
+}
