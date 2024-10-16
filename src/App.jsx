@@ -1,6 +1,7 @@
 import "./App.css";
 import React, { useState } from "react";
 import CreateToDo from "./CreateToDo";
+import RenderToDo from "./RenderToDo";
 
 function App() {
   const [toDoList, setToDoList] = useState([]);
@@ -15,18 +16,7 @@ function App() {
   return (
     <div>
       <CreateToDo handleToDoSubmit={handleToDoSubmit} />
-      <div className="toDoListContainer">
-        {toDoList.map((item) => {
-          return (
-            <div className="toDoElementGrid">
-              <div>{item.task}</div>
-              <div>{item.contents}</div>
-              <div>{item.priority}</div>
-              <div>{item.category}</div>
-            </div>
-          );
-        })}
-      </div>
+      <RenderToDo toDoList={toDoList} />
     </div>
   );
 }
