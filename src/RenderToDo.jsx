@@ -7,6 +7,26 @@ const RenderToDo = (props) => {
     return arr.sort((a, b) => b.priority - a.priority);
   };
 
+  const splitIntoCategoryArrays = (arr) => {
+    const categoryMap = {};
+
+    arr.forEach((element) => {
+      const category = element.category;
+
+      if (!categoryMap[category]) {
+        categoryMap[category] = [];
+      }
+
+      categoryMap[category].push(element);
+    });
+    return Object.values(categoryMap);
+  };
+
+  if (props.isCategorised) {
+    const splitArrays = splitIntoCategoryArrays(toDoList);
+    console.log(splitArrays);
+  }
+
   const prioritisedToDoList = priorityOrder(toDoList);
 
   return (

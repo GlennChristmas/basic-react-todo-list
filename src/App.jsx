@@ -26,7 +26,7 @@ function App() {
         isCategorised={isCategorised}
         handleCategoryClick={handleCategoryClick}
       />
-      <RenderToDo toDoList={toDoList} />
+      <RenderToDo toDoList={toDoList} isCategorised={isCategorised} />
     </div>
   );
 }
