@@ -22,12 +22,12 @@ const RenderToDo = (props) => {
     return Object.values(categoryMap);
   };
 
+  const prioritisedToDoList = priorityOrder(toDoList);
+
   if (props.isCategorised) {
     const splitArrays = splitIntoCategoryArrays(toDoList);
     console.log(splitArrays);
   }
-
-  const prioritisedToDoList = priorityOrder(toDoList);
 
   return (
     <div className="toDoListContainer">
