@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 
 function CreateToDo(props) {
-  const [toDoItem, setToDoItem] = useState({});
+  const [toDoItem, setToDoItem] = useState({
+    task: undefined,
+    contents: undefined,
+    priority: undefined,
+    category: undefined,
+  });
 
   const [toDoCategories, setToDoCategories] = useState([
     "Work/Professional",
