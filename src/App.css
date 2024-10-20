@@ -34,6 +34,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: flex-start;
   height: auto;
   width: 70vw;
 }
@@ -48,6 +49,7 @@
   padding: 20px;
   width: 400px;
   margin: 20px;
+  max-height: 100%;
 }
 
 .empty-fields-warning {
