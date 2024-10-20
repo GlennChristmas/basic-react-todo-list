@@ -30,6 +30,8 @@ function App() {
     //I update the state isEmptyFields below as we use the state in a ternary operator to display a warning below.
     setIsEmptyFields(() => isEmptyFieldsScoped);
 
+    const lastCategory = toDoItem.category;
+
     if (!isEmptyFieldsScoped) {
       setToDoList((prevToDoList) => {
         return [...prevToDoList, toDoItem];
@@ -38,7 +40,7 @@ function App() {
         task: "",
         contents: "",
         priority: 50,
-        category: "Work/Professional",
+        category: lastCategory,
       });
     }
   };
