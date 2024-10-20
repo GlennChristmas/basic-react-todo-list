@@ -7,10 +7,10 @@ const RenderToDoList = (props) => {
     <div className="toDoListContainer">
       {arr.map((item, index) => (
         <div key={index} className="toDoElementGrid">
-          <div>{item.task}</div>
-          <div>{item.contents}</div>
-          <div>{item.priority}</div>
-          <div>{item.category}</div>
+          <div className="task">{item.task}</div>
+          <div className="contents">{item.contents}</div>
+          <div className="priority">Priority rating: {item.priority}</div>
+          <div className="category">Category: {item.category}</div>
         </div>
       ))}
     </div>

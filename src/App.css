@@ -46,11 +46,30 @@
   background-color: #272343;
   color: white;
   padding: 20px;
-  width: 10rem;
+  width: 400px;
   margin: 20px;
 }
 
 .empty-fields-warning {
   color: rgb(174, 3, 3);
   margin: 20px;
+}
+
+/* Rendered To Do Items */
+
+.task {
+  font-weight: 600;
+  font-size: larger;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+.priority {
+  margin-top: 30px;
+  margin-bottom: 5px;
+  font-size: small;
+}
+
+.category {
+  font-size: small;
 }
