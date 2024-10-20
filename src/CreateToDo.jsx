@@ -1,13 +1,6 @@
 import React, { useState } from "react";
 
 function CreateToDo(props) {
-  const [toDoItem, setToDoItem] = useState({
-    task: undefined,
-    contents: undefined,
-    priority: undefined,
-    category: undefined,
-  });
-
   const [toDoCategories, setToDoCategories] = useState([
     "Work/Professional",
     "Personal Development",
@@ -19,7 +12,7 @@ function CreateToDo(props) {
   const handleToDoChange = (event) => {
     const { name, value } = event.target;
 
-    setToDoItem((prevToDoItem) => {
+    props.setToDoItem((prevToDoItem) => {
       return {
         ...prevToDoItem,
         [name]: value,
@@ -34,6 +27,7 @@ function CreateToDo(props) {
         placeholder="Task title"
         name="task"
         onChange={handleToDoChange}
+        value={props.toDoItem.task}
       ></input>
       <textarea
         placeholder="Task details"
@@ -57,7 +51,9 @@ function CreateToDo(props) {
           <option>{category}</option>
         ))}
       </select>
-      <button onClick={() => props.handleToDoSubmit(toDoItem)}>Add</button>
+      <button onClick={() => props.handleToDoSubmit(props.toDoItem)}>
+        Add
+      </button>
     </div>
   );
 }
