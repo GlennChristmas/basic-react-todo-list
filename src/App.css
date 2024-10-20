@@ -6,7 +6,8 @@
 
 .to-do-grid {
   display: grid;
-  grid-template-rows: 400px auto auto auto;
+  grid-template-rows: 480px auto auto auto;
+  justify-items: center;
 }
 
 .create-todo {
@@ -15,6 +16,18 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
+  border: 1px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  background-color: #bae8e8;
+  width: 300px;
+}
+
+.priority-container {
+  width: 100%;
 }
 
 .toDoListContainer {
@@ -24,10 +37,11 @@
 
 .toDoElementGrid {
   border: 1px;
-  border-radius: 5px;
+  border-radius: 10px;
   border-style: solid;
-  border-color: rgb(118, 168, 168);
-  background-color: rgb(180, 226, 215);
+  border-color: #bae8e8;
+  background-color: #272343;
+  color: white;
   padding: 20px;
   width: 10rem;
   margin: 20px;
@@ -35,4 +49,5 @@
 
 .empty-fields-warning {
   color: rgb(174, 3, 3);
+  margin: 20px;
 }

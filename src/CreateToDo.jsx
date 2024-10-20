@@ -56,7 +56,10 @@ function CreateToDo(props) {
           <option>{category}</option>
         ))}
       </select>
-      <button onClick={() => props.handleToDoSubmit(props.toDoItem)}>
+      <button
+        className="add-to-do"
+        onClick={() => props.handleToDoSubmit(props.toDoItem)}
+      >
         Add
       </button>
     </div>
