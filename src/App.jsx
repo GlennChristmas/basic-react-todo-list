@@ -46,20 +46,24 @@ function App() {
   };
 
   return (
-    <div className="to-do-container">
-      <div className="to-do-grid">
-        <CreateToDo
-          handleToDoSubmit={handleToDoSubmit}
-          setToDoItem={setToDoItem}
-          toDoItem={toDoItem}
-        />
-        {isEmptyFields ? <EmptyFieldsWarning /> : null}
-        <CategorisationToggle
-          isCategorised={isCategorised}
-          handleCategoryClick={handleCategoryClick}
-        />
-        <RenderToDo toDoList={toDoList} isCategorised={isCategorised} />
+    <div class="content-container">
+      <div className="app-header">Header</div>
+      <div className="to-do-container">
+        <div className="to-do-grid">
+          <CreateToDo
+            handleToDoSubmit={handleToDoSubmit}
+            setToDoItem={setToDoItem}
+            toDoItem={toDoItem}
+          />
+          {isEmptyFields ? <EmptyFieldsWarning /> : null}
+          <CategorisationToggle
+            isCategorised={isCategorised}
+            handleCategoryClick={handleCategoryClick}
+          />
+          <RenderToDo toDoList={toDoList} isCategorised={isCategorised} />
+        </div>
       </div>
+      <div className="app-footer">Footer</div>
     </div>
   );
 }
