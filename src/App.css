@@ -6,8 +6,8 @@
 
 .to-do-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: top;
+  justify-content: flex-start;
   flex-direction: column;
   flex-grow: 1;
 }
@@ -15,12 +15,69 @@
 .app-header {
   background-color: #272343;
   width: 100vw;
-  height: 100px;
+  height: 100%;
+}
+
+.app-header-grid {
+  color: white;
+  display: grid;
+  grid-template-columns: 2fr 3fr 1fr 1fr;
+  grid-template-rows: 75px 75px 30px;
+  grid-template-areas:
+    "whitespace1 app-title whitespace2 whitespace2"
+    "whitespace1 app-logo whitespace2 whitespace2"
+    "whitespace1 app-logo asterisk-text asterisk-text";
+  height: 100%;
+}
+
+.whitespace1 {
+  grid-area: whitespace1;
+}
+
+.whitespace2 {
+  grid-area: whitespace2;
+}
+
+.app-title {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  grid-area: app-title;
+  font-size: 50pt;
+}
+
+.app-logo {
+  grid-area: app-logo;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+
+.asterisk-text {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+  grid-area: asterisk-text;
+  font-size: 9pt;
 }
 
 .app-footer {
   background-color: #272343;
-  width: 100vw;
+  height: 100px;
+}
+
+.app-footer-grid {
+  display: grid;
+  height: 100%;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 15pt;
+  height: 100%;
 }
 
 .to-do-grid {

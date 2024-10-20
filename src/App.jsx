@@ -4,6 +4,8 @@ import CreateToDo from "./CreateToDo";
 import RenderToDo from "./RenderToDo";
 import CategorisationToggle from "./CategorisationToggle";
 import EmptyFieldsWarning from "./EmptyFieldsWarning";
+import Header from "./Header";
+import Footer from "./Footer";
 
 function App() {
   const [toDoList, setToDoList] = useState([]);
@@ -47,7 +49,7 @@ function App() {
 
   return (
     <div class="content-container">
-      <div className="app-header">Header</div>
+      <Header />
       <div className="to-do-container">
         <div className="to-do-grid">
           <CreateToDo
@@ -63,7 +65,7 @@ function App() {
           <RenderToDo toDoList={toDoList} isCategorised={isCategorised} />
         </div>
       </div>
-      <div className="app-footer">Footer</div>
+      <Footer />
     </div>
   );
 }
