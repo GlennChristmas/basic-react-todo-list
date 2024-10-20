@@ -136,6 +136,17 @@
 
 /* Rendered To Do Items */
 
+.to-do-display-container {
+  margin-top: 20px;
+}
+
+.category-title {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: 15pt;
+}
+
 .task {
   color: #fdd803;
   font-weight: 600;

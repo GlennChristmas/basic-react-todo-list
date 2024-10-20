@@ -36,8 +36,10 @@ const RenderToDo = (props) => {
   return (
     <div>
       {categorisedToDoLists.map((item, index) => (
-        <div>
-          <div>{props.isCategorised ? item[0].category : ""}</div>
+        <div className="to-do-display-container">
+          <div className="category-title">
+            {props.isCategorised ? item[0].category : ""}
+          </div>
           <RenderToDoList key={index} arr={item} />
         </div>
       ))}
