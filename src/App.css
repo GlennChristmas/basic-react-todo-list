@@ -60,6 +60,7 @@
 /* Rendered To Do Items */
 
 .task {
+  color: #fdd803;
   font-weight: 600;
   font-size: larger;
   margin-bottom: 20px;

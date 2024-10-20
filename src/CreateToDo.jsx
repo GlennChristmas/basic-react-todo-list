@@ -22,7 +22,7 @@ function CreateToDo(props) {
 
   return (
     <div className="create-todo">
-      <header>Add task</header>
+      <header>Add a task</header>
       <input
         placeholder="Task title"
         name="task"
