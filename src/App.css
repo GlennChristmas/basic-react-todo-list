@@ -35,8 +35,9 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-items: flex-start;
+  justify-content: center;
   height: auto;
-  width: 70vw;
+  width: minmax(300px, 70vw);
 }
 
 .toDoElementGrid {
