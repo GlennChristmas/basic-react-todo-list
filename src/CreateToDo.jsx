@@ -49,6 +49,9 @@ function CreateToDo(props) {
         ></input>
       </div>
       <select name="category" onChange={handleToDoChange}>
+        <option value="" disabled>
+          Select a category
+        </option>
         {toDoCategories.map((category) => (
           <option>{category}</option>
         ))}

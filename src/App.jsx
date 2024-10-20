@@ -12,8 +12,9 @@ function App() {
   const [toDoItem, setToDoItem] = useState({
     task: undefined,
     contents: undefined,
-    priority: undefined,
-    category: undefined,
+    //set these to default as a value needs to exist in initial render - I appreciate it's a bit hacky!
+    priority: 50,
+    category: "Work/Professional",
   });
 
   const handleToDoSubmit = (toDoItem) => {
@@ -34,8 +35,8 @@ function App() {
       setToDoItem({
         task: "",
         contents: "",
-        priority: "",
-        category: "",
+        priority: 50,
+        category: "Work/Professional",
       });
     }
   };
