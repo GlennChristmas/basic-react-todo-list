@@ -9,6 +9,7 @@ body {
 
 #root {
   background-color: #f3fbfb;
+  background-image: url("../public/images/shattered.png");
   display: flex;
   flex-direction: column;
   height: 100%;
