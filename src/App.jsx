@@ -46,18 +46,20 @@ function App() {
   };
 
   return (
-    <div>
-      <CreateToDo
-        handleToDoSubmit={handleToDoSubmit}
-        setToDoItem={setToDoItem}
-        toDoItem={toDoItem}
-      />
-      {isEmptyFields ? <EmptyFieldsWarning /> : null}
-      <CategorisationToggle
-        isCategorised={isCategorised}
-        handleCategoryClick={handleCategoryClick}
-      />
-      <RenderToDo toDoList={toDoList} isCategorised={isCategorised} />
+    <div className="to-do-container">
+      <div className="to-do-grid">
+        <CreateToDo
+          handleToDoSubmit={handleToDoSubmit}
+          setToDoItem={setToDoItem}
+          toDoItem={toDoItem}
+        />
+        {isEmptyFields ? <EmptyFieldsWarning /> : null}
+        <CategorisationToggle
+          isCategorised={isCategorised}
+          handleCategoryClick={handleCategoryClick}
+        />
+        <RenderToDo toDoList={toDoList} isCategorised={isCategorised} />
+      </div>
     </div>
   );
 }
