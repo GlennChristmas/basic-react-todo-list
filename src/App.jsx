@@ -31,6 +31,12 @@ function App() {
       setToDoList((prevToDoList) => {
         return [...prevToDoList, toDoItem];
       });
+      setToDoItem({
+        task: "",
+        contents: "",
+        priority: "",
+        category: "",
+      });
     }
   };
 

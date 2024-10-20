@@ -34,6 +34,7 @@ function CreateToDo(props) {
         rows="5"
         name="contents"
         onChange={handleToDoChange}
+        value={props.toDoItem.contents}
       ></textarea>
       <div class="priority-container">
         <div>Task priority</div>
@@ -44,6 +45,7 @@ function CreateToDo(props) {
           id="taskPriority"
           name="priority"
           onChange={handleToDoChange}
+          value={props.toDoItem.priority}
         ></input>
       </div>
       <select name="category" onChange={handleToDoChange}>
