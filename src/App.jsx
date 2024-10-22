@@ -7,17 +7,21 @@ import EmptyFieldsWarning from "./EmptyFieldsWarning";
 import Header from "./Header";
 import Footer from "./Footer";
 
+let lastCategory = undefined;
+
+const defaultToDoItem = {
+  task: "",
+  contents: "",
+  //set these to default as a value needs to exist in initial render - I appreciate it's a bit hacky!
+  priority: 50,
+  category: "Work/Professional",
+};
+
 function App() {
   const [toDoList, setToDoList] = useState([]);
   const [isCategorised, setIsCategorised] = useState(false);
   const [isEmptyFields, setIsEmptyFields] = useState(false);
-  const [toDoItem, setToDoItem] = useState({
-    task: undefined,
-    contents: undefined,
-    //set these to default as a value needs to exist in initial render - I appreciate it's a bit hacky!
-    priority: 50,
-    category: "Work/Professional",
-  });
+  const [toDoItem, setToDoItem] = useState(defaultToDoItem);
 
   const handleToDoSubmit = (toDoItem) => {
     //handle blanks in toDoItem
@@ -30,17 +34,13 @@ function App() {
     //I update the state isEmptyFields below as we use the state in a ternary operator to display a warning below.
     setIsEmptyFields(() => isEmptyFieldsScoped);
 
-    const lastCategory = toDoItem.category;
-
     if (!isEmptyFieldsScoped) {
       setToDoList((prevToDoList) => {
         return [...prevToDoList, toDoItem];
       });
       setToDoItem({
-        task: "",
-        contents: "",
-        priority: 50,
-        category: lastCategory,
+        ...defaultToDoItem,
+        category: toDoItem.category,
       });
     }
   };
