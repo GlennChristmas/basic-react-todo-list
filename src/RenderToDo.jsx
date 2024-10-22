@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import RenderToDoList from "./RenderToDoList";
 
 const RenderToDo = (props) => {
@@ -29,7 +29,6 @@ const RenderToDo = (props) => {
   if (props.isCategorised) {
     categorisedToDoLists = splitIntoCategoryArrays(prioritisedToDoList);
   } else if (!props.isCategorised) {
-    //note the nesting
     categorisedToDoLists = { uncategorised: prioritisedToDoList };
   }
 
