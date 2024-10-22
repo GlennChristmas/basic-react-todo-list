@@ -21,7 +21,7 @@ const RenderToDo = (props) => {
 
       categoryMap[category].push(element);
     });
-    return Object.values(categoryMap);
+    return categoryMap;
   };
 
   const prioritisedToDoList = priorityOrder(toDoList);
@@ -30,17 +30,17 @@ const RenderToDo = (props) => {
     categorisedToDoLists = splitIntoCategoryArrays(prioritisedToDoList);
   } else if (!props.isCategorised) {
     //note the nesting
-    categorisedToDoLists = [[...prioritisedToDoList]];
+    categorisedToDoLists = { uncategorised: prioritisedToDoList };
   }
 
   return (
     <div>
-      {categorisedToDoLists.map((item, index) => (
-        <div className="to-do-display-container">
+      {Object.entries(categorisedToDoLists).map((value, index) => (
+        <div key={value[0]} className="to-do-display-container">
           <div className="category-title">
-            {props.isCategorised ? item[0].category : ""}
+            {props.isCategorised ? value[0] : ""}
           </div>
-          <RenderToDoList key={index} arr={item} />
+          <RenderToDoList arr={value[1]} />
         </div>
       ))}
     </div>
