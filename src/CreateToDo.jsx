@@ -36,7 +36,7 @@ function CreateToDo(props) {
         onChange={handleToDoChange}
         value={props.toDoItem.contents}
       ></textarea>
-      <div class="priority-container">
+      <div className="priority-container">
         <div>Task priority</div>
         <input
           type="range"

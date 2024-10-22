@@ -50,7 +50,7 @@ function App() {
   };
 
   return (
-    <div class="content-container">
+    <div className="content-container">
       <Header />
       <div className="to-do-container">
         <div className="to-do-grid">
