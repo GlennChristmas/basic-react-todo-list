@@ -5,14 +5,16 @@ const RenderToDoList = (props) => {
 
   return (
     <div className="toDoListContainer">
-      {arr.map((item, index) => (
-        <div key={index} className="toDoElementGrid">
-          <div className="task">{item.task}</div>
-          <div className="contents">{item.contents}</div>
-          <div className="priority">Priority rating: {item.priority}</div>
-          <div className="category">Category: {item.category}</div>
-        </div>
-      ))}
+      {arr.map((item, index) => {
+        return (
+          <div key={index} className="toDoElementGrid">
+            <div className="task">{item.task}</div>
+            <div className="contents">{item.contents}</div>
+            <div className="priority">Priority rating: {item.priority}</div>
+            <div className="category">Category: {item.category}</div>
+          </div>
+        );
+      })}
     </div>
   );
 };

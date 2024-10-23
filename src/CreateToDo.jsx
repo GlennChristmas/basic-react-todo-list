@@ -52,9 +52,9 @@ function CreateToDo(props) {
         <option value="" disabled>
           Select a category
         </option>
-        {toDoCategories.map((category, key) => (
-          <option key={key}>{category}</option>
-        ))}
+        {toDoCategories.map((category, key) => {
+          return <option key={key}>{category}</option>;
+        })}
       </select>
       <button
         className="add-to-do"
